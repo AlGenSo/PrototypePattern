@@ -1,14 +1,14 @@
 ﻿namespace PrototypePattern.Classes
 {
     /// <summary>
-    /// Класс для внедорожников
+    /// Класс для внедорожников (Второй уровень наследования)
     /// </summary>
-    public class SUV : BaseCar, ICloneable
+    public class SUV : Car, ICloneable
     {
         public bool HasFourWheelDrive { get; set; }
 
-        public SUV(string brand, string model, int year, bool hasFourWheelDrive)
-            : base(brand, model, year)
+        public SUV(string brand, string model, int year, string color, bool hasFourWheelDrive)
+            : base(brand, model, year, color)
         {
             HasFourWheelDrive = hasFourWheelDrive;
         }
